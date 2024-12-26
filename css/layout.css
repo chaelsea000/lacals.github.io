@@ -32,12 +32,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "RixXladywatermelonR";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/RixXladywatermelonR.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 /*rem 작업을 위한 12px로 조정*/
 html {
   font-size: 12px;
