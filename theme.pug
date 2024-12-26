@@ -70,8 +70,11 @@ block div
             .lineNumber span {font-size: 3.8rem; font-weight: 800;}
             .lineNumber span:before {display:none;}
             .lessonThemeTitle{justify-content: center!important;}
-            .lessonThemeContent {gap: 1rem; text-align: center!important;}
+            .lessonThemeContent {gap: 1rem; text-align: center!important; word-break: break-all;}
             .lessonThemeContent p {margin-top:0; font-size: 2.1rem;}
             .lessonThemeContent:nth-child(n+1) {flex-direction: column;}
             .lessonThemeContent img {width:100%;}
+        }
+        @media (max-width: 470px) {
+            .lessonThemeContent p {white-space:normal; word-break: keep-all;}
         }
