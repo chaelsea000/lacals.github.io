@@ -6,8 +6,8 @@ block div
     section.jumbotron.jumbotronBg1 
         div.container
             p.jumbotronLead Signatures
-    section#content
-        div.lesson.container-fluid
+    section#content.container-fluid
+        div.lesson
             h4.title 정규 레슨
             p.detail 사고의 유연성을 길러 세계 어디서든 품격을 갖춘 글로벌 인재 육성을 목표로 합니다.
             div.lessonContent
@@ -34,7 +34,9 @@ block div
                         span 04
                         h5 대상
                         p 
-                            |분리가 가능하고 앉을 수 있는 월령 ~ 만 48개월 1:1 혹은 1:2로 진행합니다. 
+                            |분리가 가능하고 앉을 수 있는 월령 ~ 
+                            br.onlyMd
+                            |만 48개월 1:1 혹은 1:2로 진행합니다. 
     style.
         .lesson {padding:4rem 0; padding-bottom:8rem;}
         .lesson .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
@@ -55,6 +57,6 @@ block div
 
         }
         @media (max-width: 991.98px) {
-            .lessonContent ul li {flex-wrap: wrap;}
+            .lessonContent ul li {flex-wrap: wrap; padding:1.8rem 0.9rem;}
             .lessonContent ul li p {width: 100%; margin-top: 0.8rem;}
         }
