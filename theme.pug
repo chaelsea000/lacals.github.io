@@ -6,10 +6,14 @@ block div
     section.jumbotron.jumbotronBg1 
         div.container
             p.jumbotronLead Signatures
+    section.tabMenu
+        a(href="regular.html") Regular
+        a.active(href="theme.html") Theme
     section#content.container-fluid
         div.lesson
             h4.title 테마 레슨
-            p.detail 만 49개월 이상의 아이들을 대상으로 다양한 직간접 경험을 시켜주기 위하여 고안된 소규모 레슨입니다.
+            p.detail 만 49개월 이상의 아이들을 대상으로, 하브루타식 자기주도 활동을 통해 다양한 직·간접 경험을 하며 세상을 바라보는 시야 확장을 도모합니다. 
+                span.revInfo *체험수업 예약(주중) 별도 문의
             div.lineNumber 
                 span 01
             h5.lessonThemeTitle Class Harpatka
@@ -42,8 +46,13 @@ block div
                     |아이는 캐릭터 선정, 대본 작성, 소품 및 무대 제작 등 모든 과정을
                     br
                     |단계별로 직접 참여하며 연극을 완성해 나갑니다.
+        div.coInfo 
+            |※ 단체 및 기관 협업 
+            br.onlyLg
+            |이메일(lamalab@naver.com) 
+            |별도 문의
     style. 
-        .lesson {padding:4rem 0; padding-bottom:8rem;}
+        .lesson {padding-top: 4rem;}
         .lesson .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
         .lesson .detail {font-size: 2.1rem; font-weight: 400; color: #1d1d1f; font-family: "Nanum Square Round"; margin-bottom: 0rem;}
 
@@ -59,10 +68,15 @@ block div
         .lessonThemeTitle:last-of-type{justify-content: right;}
         .lessonThemeContent:last-of-type {flex-direction: row-reverse; text-align: right; word-break: keep-all;}
 
+        .revInfo {font-size:1.8rem; margin-left: 4rem; font-style: italic; font-weight: 300; color: #333;}
+        .coInfo {font-size: 2.4rem; margin-top: 1.4rem; font-weight: 600; padding-bottom:8rem;}
+
         @media (max-width: 1199.98px) {
             .lessonThemeTitle:last-of-type{justify-content: left;}
             .lessonThemeContent:last-of-type {flex-direction: row;}
             .lessonThemeContent:last-of-type p {margin:0;}
+            .revInfo {display: block; margin-left:0; margin-top: 0.4rem;}
+            .coInfo {display: flex; justify-content: center; font-size:2rem; margin-top:2rem; padding:1rem 2rem; border-radius:25px; background-color:#f8f9fa; text-align: center;}
         }
         @media (max-width: 991.98px) {
             .lesson .detail {text-align:center;}
