@@ -29,7 +29,7 @@ block div
                             span.textOrange S
                             |TAGE
                         p symbolizes the unique space where every child is empowered to express themselves authentically, explore their individuality, and take bold steps forward with confidence.
-                p.detail_mobile
+                //-p.detail_mobile
                     span.textOrange LA
                         span MA
                     |means “why?” in Hebrew—representing our belief in the power of curiosity and meaningful questioning as the foundation of all learning.
@@ -69,7 +69,9 @@ block div
                     p Creative Thinking
         div.theory.container-fluid
             h4.title LaCalS 
-                b Theoretical Foundations of the LaCalS Program
+                b Theoretical Foundations 
+                    br.onlyLg
+                    |of the LaCalS Program
             ul.imageOverText
                 li
                     img(src="../images/theoryImage3.png")
@@ -88,7 +90,10 @@ block div
                 h4.title LaCalS
                     b  Mission
                 div.detail
-                    |LaCalS has been founded with the heartfelt hope of giving wings to each child’s uniqueness—enabling them to soar higher, farther, and-most importantly-bravely and joyfully. We believe that every child carries within them a spark of originality, and it is our mission to nurture that spark into confident self-expression, creative exploration, and emotional resilience.
+                    |LaCalS has been founded with the heartfelt hope of giving wings to each child’s uniqueness—enabling them to soar higher, farther, and-most importantly-bravely and joyfully. 
+                    
+                    |We believe that every child carries within them a spark of originality, and it is our mission to nurture that spark into confident self-expression, creative exploration, and emotional resilience.
+                    
                     |At LaCalS, developmental science meets the arts to build a stage where children’s voices are heard, their imaginations come alive, and their potential takes flight.
     style.
         .title b {white-space: nowrap;}
@@ -144,7 +149,7 @@ block div
         }
         
         @media (max-width: 991.98px) {
-            .focus .detail {display: none;}
+            .focus .detail {display: normal;}
             .focus .detail_mobile {display: block;}
 
             .keywords ul.cross li {flex-basis: 49%;}
