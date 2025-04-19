@@ -91,7 +91,7 @@
             <p>Global Citizenship</p>
           </li>
           <li> <img src="../images/keywordsImage3.png">
-            <p>Self-Expression (Meta-cognition)</p>
+            <p>Self-Expression <br class="onlyMd">(Meta-cognition)</p>
           </li>
           <li> <img src="../images/keywordsImage2.png">
             <p>Emotional Intelligence</p>
@@ -105,7 +105,7 @@
         </ul>
       </div>
       <div class="theory container-fluid">
-        <h4 class="title">LaCalS <b>Theoretical Foundations <br class="onlyLg">of the LaCalS Program</b></h4>
+        <h4 class="title">LaCalS <b>Program Foundations</b></h4>
         <ul class="imageOverText">
           <li><img src="../images/theoryImage3.png">
             <p>CASEL&SSES(OECD)<b>Social-Emotional Competencies</b></p>
@@ -121,8 +121,9 @@
       <div class="introduceBg"> 
         <div class="introduce container-fluid">
           <h4 class="title">LaCalS<b> Mission</b></h4>
-          <div class="detail">Every child is special.<br>LaCalS has been founded with the heartfelt hope of giving wings to each child’s uniqueness—enabling them to soar higher, farther, and-most importantly-bravely and joyfully. 
-            We believe that every child carries within them a spark of originality, and it is our mission to nurture that spark into confident self-expression, creative exploration, and emotional resilience.<br>At LaCalS, developmental science meets the arts to build a stage where children’s voices are heard, their imaginations come alive, and their potential takes flight.
+          <div class="detail">Every child is special.<br>LaCalS has been founded with the heartfelt hope of giving wings to each child’s uniqueness—enabling them
+            to soar higher, farther, and-most importantly-bravely and joyfully. <br>We believe that every child carries within them a spark of originality,
+            and it is our mission to nurture that spark into confident self-expression, creative exploration, and emotional resilience.<br>At LaCalS, developmental science meets the arts to build a stage where children’s voices are heard, their imaginations come alive, and their potential takes flight.
           </div>
         </div>
       </div>
@@ -131,7 +132,7 @@
       .title b {white-space: nowrap;}
       
       .focusBg {background-color:rgba(253,251,248,1);}
-      .focusEtc {font-size: 2.1rem; font-weight: 200; font-style: italic;}
+      .focusEtc {/*font-size: 2.1rem; font-weight: 200; font-style: italic; 250419 삭제*/}
       .focus {display:flex; padding:4.5rem 0;}
       .focus .title {flex-basis: 20%; font-size: 2.8rem; font-weight: 700; color: black;}
       .focus span {color:#878686;}
@@ -153,11 +154,12 @@
       
       .theory {padding-bottom: 18rem;}
       .theory .title {margin-bottom: 4.8rem;}
+      .theory li p {width: 100%;}
       
-      .introduceBg {background: rgba(254,251,248,1) url("../images/mothersLove.png") no-repeat right bottom; background-size: 780px auto;}
+      .introduceBg {background: rgba(254,251,248,1) url("../images/mothersLove.png") no-repeat right -17rem bottom 0; background-size: 780px auto;}
       .introduce {padding: 6rem 0;}
       .introduce .title {margin-bottom:2.5rem;}
-      .introduce .detail {margin-right:30%; font-size:2.4rem; line-height: 220%; text-align:center;}
+      .introduce .detail {max-width: 1202px; font-size:2.4rem; line-height: 220%; text-align:center;}
       
       @media (max-width: 1199.98px) {
           .focus {flex-direction: column; padding: 3rem 2rem;}
@@ -178,7 +180,7 @@
           .introduceBg {background-image: none;}
           /*.introduceBg {position: relative; background-position: right -98px bottom; background-size: 400px auto; z-index: -2;}
           .introduceBg:before {content: ''; position: absolute; top: 0; left: 0; right: 0; height: calc(100%); background-color: rgba(255, 255, 255, 0.6); z-index: -1;}*/
-          .introduce .detail {margin-right: 0; line-height: 140%;}        
+          .introduce .detail {max-width: calc(100% - 4rem); margin: 0 auto; line-height: 140%;}        
       }
       
       @media (max-width: 991.98px) {
@@ -189,13 +191,16 @@
           .keywords ul.cross li:last-child {flex-basis: 99%;}
           
           .theory ul li {flex-basis: 100%;}
+      }
       
+      @media (max-width: 575.98px) {
+          .introduce .detail {max-width: 363px;}
       }
     </style>
     <footer class="footer"> 
       <div class="container-fluid footerInner"> 
         <p class="footerLogo">LAMA GLOCAL STAGE</p>
-        <p class="footerAddress">9, Seolleung-ro 8-gil, Gangnam-gu, Seoul, Republic of Korea</p>
+        <p class="footerAddress">9, Seolleung-ro 8-gil, Gangnam-gu, Seoul, Republic of Korea</p><a class="footerLangLink" href="/">Go to Korean Site</a>
         <p class="footerRight">Copyright&copy; LaCalS. All rights reserved.</p>
       </div>
     </footer>
