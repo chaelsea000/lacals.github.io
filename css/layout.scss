@@ -343,6 +343,9 @@ p + .subHeading, figure + .subHeading, div+ .subHeading, table + .subHeading, ul
 .footer {padding:4rem 0; font-size: 1.8rem; line-height: 120%; color: white; background-color: rgba(67, 86, 74, 1);
   &Logo {}
   &Address {margin-bottom: 1.8rem;}
+  &LangLink {display:block; font-size: 1.6rem; color:#888;
+    &:hover {color:#888;}
+  }
   &Right {font-size: 1.6rem; color:#888;}
 }
 /* ---------------------------------------------------
