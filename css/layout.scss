@@ -72,10 +72,12 @@ table {width:100%; margin-bottom:0; caption {position: absolute; width: 1px; hei
 @media (max-width: 1200px) {
   html {font-size:9px;}
   .onlyLg {display:block;}
+  .onlyLgHide {display:none;}
 }
 @media (max-width: 768px) {
   html {font-size:9px;}
   .onlyMd {display:block;}
+  .onlyMdHide {display:none;}
 }
 
 /* ---------------------------------------------------

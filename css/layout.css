@@ -81,6 +81,10 @@ table caption {
   .onlyLg {
     display: block;
   }
+
+  .onlyLgHide {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   html {
@@ -89,6 +93,10 @@ table caption {
 
   .onlyMd {
     display: block;
+  }
+
+  .onlyMdHide {
+    display: none;
   }
 }
 /* ---------------------------------------------------
