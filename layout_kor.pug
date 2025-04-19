@@ -61,8 +61,8 @@ html(lang='ko')
                 div.dropdown-menu(aria-labelledby="dropdown3")
                   a.dropdown-item(href="information.html") Information
           ul#gnbSub.gnbSub.navbar-nav
-            li.nav-item 
-              a.nav-link.engLink(href="whatwedo.html") ENG
+            //-li.nav-item 
+              a.nav-link.langLink(href="/eng") ENG
             li.nav-item 
               a.nav-link(href="https://www.youtube.com/@lacals-c9w" target="_blank")
                 i.iconYoutube.fab.fa-youtube-square
@@ -77,10 +77,5 @@ html(lang='ko')
         .container-fluid.footerInner 
           p.footerLogo LAMA GLOCAL STAGE
           p.footerAddress 서울특별시 강남구 선릉로8길 9 1층
-          a.footerEngLink(href="/eng/whatwedo.html") 영문홈페이지 바로가기
+          a.footerLangLink(href="/eng") Go to English Site
           p.footerRight Copyright&copy; LaCalS. All rights reserved.
-      
-style.
-  .engLink {font-size:1.8rem;}
-  .footerEngLink {display:block; font-size: 1.6rem; color:#888;}
-  .footerEngLink:hover {color:#888;}
