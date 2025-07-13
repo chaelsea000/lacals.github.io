@@ -1,0 +1,94 @@
+extends layout_kor.pug 
+block variables 
+    -var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1 
+        div.container
+            p.jumbotronLead Signatures
+    section.tabMenu
+        a(href="regular.html") Regular
+        a.active(href="theme.html") Theme
+    section#content.container-fluid
+        div.lesson
+            h4.title 테마 레슨
+            p.detail 만 49개월 이상의 아이들을 대상으로, 하브루타식 자기주도 활동을 통해 다양한 직·간접 경험을 하며 세상을 바라보는 시야 확장을 도모합니다. 
+                //-span.revInfo *체험수업 예약 별도 문의
+            div.lineNumber 
+                span 01
+            h5.lessonThemeTitle Class Harpatka
+            div.lessonThemeContent
+                img(src="./images/lessonImage2.png")
+                p
+                    |하르팟카 클래스는 영어와 한국어로 진행되며
+                    br
+                    span.highlight 하브루타식 글로벌 사고확장
+                    |을 도모합니다.
+                    br
+                    |추후 문해력 향상, 사고력 확장, 사고 유연성 등 
+                    br
+                    |전반적으로 긍정적인 영향을 끼칩니다.
+            div.lineNumber 
+                span 02
+            h5.lessonThemeTitle Class Bitahon
+            div.lessonThemeContent
+                img(src="./images/lessonImage3.png")
+                p
+                    |영국 정통 연극연출가와 함께하는 
+                    span.highlight
+                        |자기주도 연극 프로그램
+                    |으로,
+                    br
+                    |그림책부터 클래식 문학까지 다양한 장르를 다각도로 해석하고
+                    br 
+                    |아이의 색깔로 무대에서 표현합니다.
+                    br
+                    |아이는 캐릭터 선정, 대본 작성, 소품 및 무대 제작 등 모든 과정을
+                    br
+                    |단계별로 직접 참여하며 연극을 완성해 나갑니다.
+        div.coInfo 
+            |※ 외부강의 및 기관 협업 
+            br.onlyLg
+            |이메일(postmaster@lacals.com) 
+            |별도 문의
+    style. 
+        .lesson {padding-top: 4rem;}
+        .lesson .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
+        .lesson .detail {font-size: 2.1rem; font-weight: 400; color: #1d1d1f; font-family: "Nanum Square Round"; margin-bottom: 0rem;}
+
+        .lineNumber {display: flex; justify-content: center; padding-top: 14rem; padding-bottom: 4rem;}
+        .lineNumber span{display:flex; position: relative; justify-content: center; align-items: center; font-size:2rem;/*width: 5rem; height: 5rem; border-radius:50%;*/}
+        .lineNumber span:before{position: absolute; content:''; width: 1px; height: 6rem; transform:translateY(-100%); background-color:#222;}
+        
+        .lessonThemeTitle {display: flex; font-size: 3.8rem; margin-bottom: 3.5rem;}
+        .lessonThemeContent {display: flex; gap: 4rem; align-items: center;}
+        .lessonThemeContent img {width:100%; max-width: 40rem; height: 25rem; object-fit: cover; border-radius: 20px;}
+        .lessonThemeContent p {margin:0; font-size: 2.5rem; color:#222; white-space: nowrap;}
+
+        .lessonThemeTitle:last-of-type{justify-content: right;}
+        .lessonThemeContent:last-of-type {flex-direction: row-reverse; text-align: right; word-break: keep-all;}
+
+        .revInfo {font-size:1.8rem; margin-left: 4rem; font-style: italic; font-weight: 300; color: #333;}
+        .coInfo {display: flex; max-width: 60%; justify-content: center; margin:0 auto; font-size: 2.4rem; margin-top: 4rem; margin-bottom:4rem; padding:1rem 0; border-radius:25px; font-weight: 600; background-color:#f8f9fa; text-align: center;}
+
+        @media (max-width: 1199.98px) {
+            .lessonThemeTitle:last-of-type{justify-content: left;}
+            .lessonThemeContent:last-of-type {flex-direction: row;}
+            .lessonThemeContent:last-of-type p {margin:0;}
+            .revInfo {display: block; margin-left:0; margin-top: 0.4rem;}
+            .coInfo {max-width: none; font-size:2rem; margin-top:2rem;}
+        }
+        @media (max-width: 991.98px) {
+            .lesson .detail {text-align:center;}
+            .lineNumber {justify-content: center; padding-top: 6rem; padding-bottom: 1rem;}
+            .lineNumber span {font-size: 3.8rem; font-weight: 800;}
+            .lineNumber span:before {display:none;}
+            .lessonThemeTitle{justify-content: center!important;}
+            .lessonThemeContent {gap: 1rem; text-align: center!important; word-break: break-all;}
+            .lessonThemeContent p {margin-top:0; font-size: 2.1rem;}
+            .lessonThemeContent:nth-child(n+1) {flex-direction: column;}
+            .lessonThemeContent img {width:100%;}
+        }
+        @media (max-width: 470px) {
+            .lessonThemeContent p {white-space:normal; word-break: keep-all;}
+        }

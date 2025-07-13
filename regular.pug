@@ -9,60 +9,98 @@ block div
     section.tabMenu
         a.active(href="regular.html") Regular
         a(href="theme.html") Theme
+        a(href="wsa.html") Atlas
     section#content.container-fluid
         div.lesson
             h4.title 정규 레슨
             p.detail 사고의 유연성을 길러 세계 어디서든 품격을 갖춘 글로벌 인재 육성을 목표로 합니다.
-            div.lessonContent
-                img(src="./images/lessonImage1.png")
+            h5.lessonThemeTitle Class Lama
+                span 창의융합 놀이 교육
+            div.lessonThemeContent
+                img(src="./images/regularImage1.png")
                 ul
-                    li
-                        span 01
-                        h5 자연스러운 습득
-                        p 
-                            |만 49개월 미만의 아이들은 언어를 그 언어 자체로 인지합니다.
-                            br
-                            |아이의 특성을 고려하여 다양한 영역에서 균형있는 발달과 사고의 유연성을 돕습니다.
-                    li
-                        span 02
-                        h5 맞춤 설계
-                        p
-                            |현재뿐만 아니라 앞으로 다가올 미래에 대한 사회문화적 맥락을 고려하고 유대인 교육철학인 하브루타 교육방식을 접목한 융합 프로그램으로 맞춤 설계합니다.
-                    li
-                        span 03
-                        h5 초석 다지기
-                        p 
-                            |아이가 흥미를 느끼고 온전히 몰입하여 다채로운 놀이를 통해 자기표현을 할 수 있도록 초석을 다집니다.
-                    li
-                        span 04
-                        h5 대상
-                        p 
-                            |분리가 가능하고 앉을 수 있는 월령 ~ 
-                            br.onlyMd
-                            |만 48개월, 1:1 혹은 1:2로 진행합니다. 
-                            //-span.revInfo *체험수업 예약 별도 문의
+                    li 
+                        span 인원
+                        |개인 / 그룹(정원 2명)
+                    li 
+                        span 시간
+                        |1회 60분, 월-금 中
+                    li  
+                        span 등록
+                        |10회~30회, 10회 단위 등록 가능
+                    li 
+                        span 대상
+                        ul 
+                            li 최소 연령 제한 없음 *앉을 수 있고 분리 가능 아동
+                            li 라칼스 입문
+                    li 
+                        span 구성
+                        ul
+                            li STEAM, 그림책, 인지발달/정서지능/창의/창작 놀이 활동
+                    li 
+                        span 언어
+                        |한국어, 영어, 스페인어, 기타 언어
+            h5.lessonThemeTitle Class Harpatka
+                span 사고 확장 및 표현력 향상 교육
+            div.lessonThemeContent
+                img(src="./images/regularImage2.png")
+                ul 
+                    li 
+                        span 인원
+                        |소수정예(정원 4명)
+                    li 
+                        span 시간
+                        |1회 60분, 월-토 中
+                    li 
+                        span 등록
+                        |10회~30회, 10회 단위 등록 가능
+                    li 
+                        span 대상
+                        ul 
+                            li 최소 만 4세 이상
+                            li 라칼스 심화
+                    li 
+                        span 구성
+                        ul
+                            li 분야별 탐구활동, 문학/비문학, STEAM x 사고력, 창작활동 x 토론, 사회정서학습(SEL)등
+                    li 
+                        span 언어
+                        |영어, 한국어
     style.
-        .lesson {padding:4rem 0; padding-bottom:8rem;}
+        .lesson {padding-top: 4rem;}
         .lesson .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
-        .lesson .detail {font-size: 2.1rem; font-weight: 400; color: #1d1d1f; font-family: "Nanum Square Round"; margin-bottom: 3.4rem;}
+        .lesson .detail {font-size: 2.1rem; font-weight: 400; color: #1d1d1f; font-family: "Nanum Square Round"; margin-bottom: 0rem;}
+         
+        .lessonThemeTitle {display: flex; flex-direction: column; font-size: 3.8rem; padding-top: 4rem; margin-bottom: 3.5rem;}
+        .lessonThemeTitle span {margin-top: 0.2rem; font-size: 2.8rem; font-weight: 300;}
+        .lessonThemeContent {display: flex; gap: 4rem; align-items: center; margin-bottom: 8rem;}
+        .lessonThemeContent img {width:100%; max-width: 33rem; height: 28rem; object-fit: cover; border-radius: 20px;}
+        .lessonThemeContent p {margin:0; font-size: 2.5rem; color:#222; white-space: wrap;}
+        .lessonThemeContent ul {margin:0; font-size: 2.2rem; color:#222; white-space: wrap;}
+        .lessonThemeContent ul li {display:flex; text-align:left;}
+        .lessonThemeContent ul li span {margin-right: 0.8rem; font-weight:600; color: #f16c22;}
         
-        .lessonContent {display: flex; justify-content: space-between; align-items: center;}
-        .lessonContent img {width: 25rem; height: 100%; object-fit: cover; border-radius: 25px; margin-right:4rem;}
-        .lessonContent ul {}
-        .lessonContent ul li {display: flex; align-items: top; padding:1.8rem 0; font-size: 2.1rem; word-break: keep-all; border-top: 1px solid #999;}
-        .lessonContent ul li:last-child {border-bottom: 1px solid #999;}
-        .lessonContent ul li > span {font-size: 2.4rem; font-weight: 500; color: #f16c22; margin-right:2rem;}
-        .lessonContent ul li > h5 {width:16rem; margin:0.4rem 2.8rem 0 0; font-size: 2.4rem; font-weight: 500; color: #6e6e73; white-space: nowrap;}
-        .lessonContent ul li > p {margin:0; padding:0; width: calc(100% - 20rem); font-size: 2.2rem;}
-    
-        .revInfo {font-size:1.8rem; margin-left: 2.8rem; font-style: italic; font-weight: 300; color: #333;}
-  
-       @media (max-width: 1199.98px) {
-            .lessonContent {display: flex; flex-direction: column;}
-            .lessonContent img {margin:0; margin-bottom: 4rem; border-radius: 25px; width: 100%; height: 38rem; object-position: top 60% right 0;}
-            .revInfo {display: block; margin-left:0;}
+        .lessonThemeTitle.right{align-items: flex-end;}
+        .lessonThemeContent.right {flex-direction: row-reverse; word-break: keep-all; margin-bottom: 4rem;}
+
+        @media (max-width: 1199.98px) {
+            .lessonThemeContent ul li {flex-direction: column;}
+            .lessonThemeTitle:last-of-type{justify-content: left;}
+            .lessonThemeContent:last-of-type {flex-direction: row;}
+            .lessonThemeContent:last-of-type p {margin:0;}
+
         }
         @media (max-width: 991.98px) {
-            .lessonContent ul li {flex-wrap: wrap; padding:1.8rem 0.9rem;}
-            .lessonContent ul li > p {width: 100%; margin-top: 0.8rem;}
+            .lesson .detail {text-align:center;}
+            .lineNumber {justify-content: center; padding-top: 6rem; padding-bottom: 1rem;}
+            .lineNumber span {font-size: 3.8rem; font-weight: 800;}
+            .lineNumber span:before {display:none;}
+            .lessonThemeTitle{align-items:center;}
+            .lessonThemeContent {gap: 1rem; text-align: center!important; word-break: break-all;}
+            .lessonThemeContent p {margin-top:0; font-size: 2.1rem;}
+            .lessonThemeContent:nth-child(n+1) {flex-direction: column;}
+            .lessonThemeContent img {width:100%;}
+        }
+        @media (max-width: 470px) {
+            .lessonThemeContent p {white-space:normal; word-break: keep-all;}
         }
