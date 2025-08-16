@@ -65,7 +65,7 @@
       <div class="lesson">
         <h4 class="title">테마 레슨</h4>
         <p class="detail">하브루타식 자기주도 활동을 통해 다양한 직·간접 경험을 하며 세상을 바라보는 시야 확장을 도모합니다. </p>
-        <div class="lineName first">클래스 비타혼(Class Bitahon)<span>자기주도 창작 교육 & 무대 경험</span></div>
+        <div class="lineName first">클래스 비타혼<br class="onlyMob">(Class Bitahon)<span>자기주도 창작 교육 & 무대 경험</span></div>
         <div class="lineNumber"> <span>01</span></div>
         <h5 class="lessonThemeTitle">SEL-하브루타 연극<span>영국 정통 연극연출가와 함께하는 자기주도 연극 프로그램</span></h5>
         <div class="lessonThemeContent"><img src="./images/themeImage1.png">
@@ -86,11 +86,11 @@
                 <li>실제 연극 배우, 의상디자이너, 무대 감독, 조명 감독 등 특강</li>
               </ul>
             </li>
-            <li> <span>진행 언어</span>영어</li>
+            <li> <span>언어</span>영어</li>
           </ul>
         </div>
         <div class="lineNumber"> <span>02</span></div>
-        <h5 class="lessonThemeTitle">드라마 & 스피치(Drama & Speech)<span>국제 무대 경험 </span></h5>
+        <h5 class="lessonThemeTitle">드라마 & 스피치<br class="onlyMob">(Drama & Speech)<span>국제 무대 경험 </span></h5>
         <div class="lessonThemeContent lessonThemeContent2"><img src="./images/themeImage2.png">
           <ul> 
             <li> <span>인원</span>개인 / 그룹(정원 2명)</li>
@@ -110,7 +110,7 @@
             <li> <span>언어</span>영어, 한국어</li>
           </ul>
         </div>
-        <div class="lineName second">클래스 레토릭(Class Rhetoric)<span>자기주도 고차 사고 기반 표현력 향상 프로그램<br>말과 글로 표현하는 올인원 문학 수업</span></div>
+        <div class="lineName second">클래스 레토릭(Class Rhetoric)<span>자기주도 고차 사고 기반 표현력 향상 프로그램:<br>말과 글로 표현하는 올인원 문학 수업</span></div>
         <div class="lessonThemeContent lessonThemeContent3"><img src="./images/themeImage3.png">
           <ul> 
             <li> <span>인원</span>개인 / 소수정예(정원 4명)</li>
@@ -158,12 +158,10 @@
       .lessonThemeContent img {width:100%; max-width: 33rem/*40rem*/; height: 48rem; object-fit: cover; border-radius: 20px;}
       .lessonThemeContent p {margin:0; font-size: 2.5rem; color:#222; white-space: wrap;}
       .lessonThemeContent ul {margin:0; font-size: 2.2rem; color:#222; white-space: wrap;}
-      .lessonThemeContent ul li {text-align:left;}
-      .lessonThemeContent ul li span {font-weight:600; margin-right: 0.8rem;}
-      .lessonThemeContent ul li i {font-weight: 300;}
+      .lessonThemeContent ul li {display:flex; text-align:left;}
+      .lessonThemeContent ul li span {margin-right: 0.8rem; font-weight:600; color: #f16c22;}
+      .lessonThemeContent ul li i {font-weight: 300; margin-left: 1.2rem;}
       
-      .lessonThemeTitle.right{align-items: flex-end;}
-      .lessonThemeContent.right {flex-direction: row-reverse; text-align: right; word-break: keep-all;}
       .lessonThemeContent2 img {height:34rem;}
       .lessonThemeContent3 img {height:34rem;}
       
@@ -171,21 +169,24 @@
       .coInfo {display: flex; max-width: 60%; justify-content: center; margin:0 auto; font-size: 2.4rem; margin-top: 4rem; margin-bottom:4rem; padding:1rem 0; border-radius:25px; font-weight: 600; background-color:#f8f9fa; text-align: center;}
       
       @media (max-width: 1199.98px) {
-          .lessonThemeTitle:last-of-type{justify-content: left;}
-          .lessonThemeContent:last-of-type {flex-direction: row;}
-          .lessonThemeContent:last-of-type p {margin:0;}
           .revInfo {display: block; margin-left:0; margin-top: 0.4rem;}
           .coInfo {max-width: none; font-size:2rem; margin-top:2rem;}
+          
+          .lessonThemeTitle{align-items:center; text-align: center;}
+          .lessonThemeContent ul li {flex-direction: column;}
+          /*.lessonThemeTitle:last-of-type{justify-content: left;}
+          .lessonThemeContent:last-of-type {flex-direction: row;}
+          .lessonThemeContent:last-of-type p {margin:0;}*/
       }
       @media (max-width: 991.98px) {
-          .lesson .detail {text-align:center;}
           .lineNumber {justify-content: center; padding-top: 6rem; padding-bottom: 1rem;}
           .lineNumber span {font-size: 3.8rem; font-weight: 800;}
           .lineNumber span:before {display:none;}
-          .lessonThemeTitle{align-items:center;}
+          .lesson .detail {text-align:center;}
+      
           .lessonThemeContent {gap: 1rem; text-align: center!important; word-break: break-all;}
           .lessonThemeContent p {margin-top:0; font-size: 2.1rem;}
-          .lessonThemeContent:nth-child(n+1) {flex-direction: column;}
+          .lessonThemeContent {flex-direction: column;}
           .lessonThemeContent img {width:100%;}
       }
       @media (max-width: 470px) {
