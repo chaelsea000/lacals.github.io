@@ -65,7 +65,7 @@
       <div class="lesson">
         <h4 class="title">정규 레슨</h4>
         <p class="detail">사고의 유연성을 길러 세계 어디서든 품격을 갖춘 글로벌 인재 육성을 목표로 합니다.</p>
-        <h5 class="lessonThemeTitle">클래스 라마(Class Lama)<span>창의융합 놀이 교육</span></h5>
+        <h5 class="lessonThemeTitle">클래스 라마<br class="onlyMob">(Class Lama)<span>창의융합 놀이 교육</span></h5>
         <div class="lessonThemeContent"><img src="./images/regularImage1.png">
           <ul>
             <li> <span>인원</span>개인 / 그룹(정원 2명)</li>
@@ -126,6 +126,7 @@
       .lessonThemeContent.right {flex-direction: row-reverse; word-break: keep-all; margin-bottom: 4rem;}
       
       @media (max-width: 1199.98px) {
+          .lessonThemeTitle{align-items:center; text-align: center;}
           .lessonThemeContent ul li {flex-direction: column;}
           /*.lessonThemeTitle:last-of-type{justify-content: left;}
           .lessonThemeContent:last-of-type {flex-direction: row;}
@@ -133,14 +134,13 @@
       
       }
       @media (max-width: 991.98px) {
-          .lesson .detail {text-align:center;}
-          .lineNumber {justify-content: center; padding-top: 6rem; padding-bottom: 1rem;}
+          /*.lineNumber {justify-content: center; padding-top: 6rem; padding-bottom: 1rem;}
           .lineNumber span {font-size: 3.8rem; font-weight: 800;}
-          .lineNumber span:before {display:none;}
-          .lessonThemeTitle{align-items:center; text-align: center;}
+          .lineNumber span:before {display:none;}*/
+          .lesson .detail {text-align:center;}
           .lessonThemeContent {gap: 1rem; text-align: center!important; word-break: break-all;}
           .lessonThemeContent p {margin-top:0; font-size: 2.1rem;}
-          .lessonThemeContent:nth-child(n+1) {flex-direction: column;}
+          .lessonThemeContent {flex-direction: column;}
           .lessonThemeContent img {width:100%;}
       }
       @media (max-width: 470px) {
