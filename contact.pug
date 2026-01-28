@@ -1,0 +1,57 @@
+extends layout_kor.pug 
+block variables 
+    -var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1 
+        div.container
+            //-p.jumbotronLead LaCalS
+    section.jumbotronFooter 
+        div.container-fluid
+            |All kids have their own stage to PLAY!
+    section#content
+        div.contentTitleWrap
+            div.contentTitle.container-fluid
+                |Contact
+        div.contact.container-fluid
+            p.intro If you have any questions or need further information, we’re here to help!
+            ul.detail
+                li 
+                    b 체험 수업 및 상담 문의
+                    a @lacals
+                li 
+                    b 외부 강의 및 기관 협업 문의
+                    a postmaster@lacals.com
+            div.contactList
+                a(href="mailto:postmaster@lacals.com" target="_blank")
+                        img(src="./images/contactList1.png")
+                a(href="https://pf.kakao.com/_dIcGG/chat" target="_blank")
+                        img(src="./images/contactList2.png")
+                a(href="https://www.instagram.com/lamaglocalstage/" target="_blank")
+                        img(src="./images/contactList3.png")
+                a(href="https://naver.me/xfYkHlWX" target="_blank")
+                        img(src="./images/contactList4.png")
+                        
+    style.
+        /*contact*/
+        .contact .intro {margin-top: 6.6rem; margin-bottom: 4rem; font-size: 1.7rem; line-height: 120%; font-family: 'Poppins'; font-weight: 600;}
+        .contact .detail {margin-bottom: 6.3rem;}
+        .contact .detail li {font-size: 1.7rem; font-weight: normal; font-family: 'SUIT';}
+        .contact .detail li b {display: inline-block; font-weight: 500; min-width: 21.5rem;}
+        .contact .detail li a {}
+
+        .contact .contactList {margin:0 auto; max-width: 40rem; margin-bottom: 19rem; display: flex; justify-content: space-between;}
+        .contact .contactList a {/*background-color: #ff5e00;*/}
+        .contact .contactList a img {width: 100%;}
+
+        @media (max-width: 1199.98px) {
+            .contact .intro {margin-top: 3.4rem; margin-bottom: 2rem; font-size: 1.4rem; font-weight: 500;}
+            .contact .detail {margin-bottom: 3.6rem;}
+            .contact .detail li {font-size: 1.4rem; font-family: 'SUIT'; font-weight: 300;}   
+            .contact .detail li b {min-width: 15.4rem; font-weight: 500;}         
+            .contact .contactList {margin-bottom: 15rem; gap: 1.8rem; justify-content: center;}
+            .contact .contactList a {max-width: 6rem;}        
+        }
+
+        @media (max-width: 991.98px) {
+        }
