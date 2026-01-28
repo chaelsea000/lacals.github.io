@@ -1,0 +1,116 @@
+extends layout_kor.pug 
+block variables 
+    -var menuType = 1
+
+block div
+    section.jumbotron.jumbotronBg1 
+        div.container
+            p.jumbotronLead Signatures
+    section.tabMenu
+        a.active(href="regular.html") Regular
+        a(href="theme.html") Theme
+        a(href="special.html") Special
+    section#content.container-fluid
+        div.lesson
+            h4.title 정규 레슨
+            p.detail 사고의 유연성을 길러 세계 어디서든 품격을 갖춘 글로벌 인재 육성을 목표로 합니다.
+            h5.lessonThemeTitle 클래스 라마
+                br.onlyMob
+                |(Class Lama)
+                span 창의융합 놀이 교육
+            div.lessonThemeContent
+                img(src="./images/regularImage1.png")
+                ul
+                    li 
+                        span 인원
+                        |개인 / 그룹(정원 2명)
+                    li 
+                        span 시간
+                        |1회 60분, 월~금
+                    li  
+                        span 등록
+                        |최소 10회, 최대 30회 등록 가능
+                        br
+                        i *1개 프로그램당 기본 10회기 구성
+                    li 
+                        span 대상
+                        ul 
+                            li 최소 연령 제한 없음
+                                i *앉을 수 있고 분리 가능 아동
+                            li 라칼스 입문
+                    li 
+                        span 구성
+                        ul
+                            li STEAM, 그림책, 인지발달/정서지능 기반 창의/창작 놀이 활동
+                    li 
+                        span 언어
+                        |한국어, 영어, 스페인어, 기타 언어
+            h5.lessonThemeTitle 클래스 하르팟카
+                br.onlyMob
+                |(Class Harpatka)
+                span 사고 확장 및 표현력 향상 교육
+            div.lessonThemeContent
+                img(src="./images/regularImage2.png")
+                ul 
+                    li 
+                        span 인원
+                        |소수정예(정원 4명)
+                    li 
+                        span 시간
+                        |1회 60분, 월~토
+                    li 
+                        span 등록
+                        |최소 10회, 최대 30회 등록 가능
+                        br
+                        i *1개 프로그램당 기본 10회기 구성
+                    li 
+                        span 대상
+                        ul 
+                            li 최소 만 4세 이상
+                            li 라칼스 심화
+                    li 
+                        span 구성
+                        ul
+                            li 분야별 탐구활동, 문학/비문학, STEAM x 사고력, 창작활동 x 토론, 사회적학습(SEL) 등
+                    li 
+                        span 언어
+                        |한국어, 영어
+    style.
+        .lesson {padding-top: 4rem;}
+        .lesson .title {font-weight: 800; margin-bottom: 2.2rem; text-align: left;}
+        .lesson .detail {font-size: 2.1rem; font-weight: 400; color: #1d1d1f; font-family: "Nanum Square Round"; margin-bottom: 0rem;}
+         
+        .lessonThemeTitle {display: flex; flex-direction: column; font-size: 3.8rem; padding-top: 4rem; margin-bottom: 3.5rem;}
+        .lessonThemeTitle span {margin-top: 0.2rem; font-size: 2.8rem; font-weight: 300;}
+        .lessonThemeContent {display: flex; gap: 4rem; align-items: center; margin-bottom: 8rem;}
+        .lessonThemeContent img {width:100%; max-width: 33rem; height: 28rem; object-fit: cover; border-radius: 20px;}
+        .lessonThemeContent p {margin:0; font-size: 2.5rem; color:#222; white-space: wrap;}
+        .lessonThemeContent ul {margin:0; font-size: 2.2rem; color:#222; white-space: wrap;}
+        .lessonThemeContent ul li {display:flex; text-align:left;}
+        .lessonThemeContent ul li span {margin-right: 0.8rem; font-weight:600; color: #f16c22;}
+        .lessonThemeContent ul li i {font-weight: 300; margin-left: 1.2rem;}
+
+        .lessonThemeTitle.right{align-items: flex-end;}
+        .lessonThemeContent.right {flex-direction: row-reverse; word-break: keep-all; margin-bottom: 4rem;}
+
+        @media (max-width: 1199.98px) {
+            .lessonThemeTitle{align-items:center; text-align: center;}
+            .lessonThemeContent ul li {flex-direction: column;}
+            /*.lessonThemeTitle:last-of-type{justify-content: left;}
+            .lessonThemeContent:last-of-type {flex-direction: row;}
+            .lessonThemeContent:last-of-type p {margin:0;}*/
+
+        }
+        @media (max-width: 991.98px) {
+            /*.lineNumber {justify-content: center; padding-top: 6rem; padding-bottom: 1rem;}
+            .lineNumber span {font-size: 3.8rem; font-weight: 800;}
+            .lineNumber span:before {display:none;}*/
+            .lesson .detail {text-align:center;}
+            .lessonThemeContent {gap: 1rem; text-align: center!important; word-break: break-all;}
+            .lessonThemeContent p {margin-top:0; font-size: 2.1rem;}
+            .lessonThemeContent {flex-direction: column;}
+            .lessonThemeContent img {width:100%;}
+        }
+        @media (max-width: 470px) {
+            .lessonThemeContent p {white-space:normal; word-break: keep-all;}
+        }
