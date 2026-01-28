@@ -9,6 +9,9 @@
 /* 가급적 extend대신 mixin을 사용 권장 */
 /*max-width 기본값 0은 트릭*/
 /*부트스트랩 sr-only와 동일*/
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/SUIT/SUIT.css");
+@import url("https://rsms.me/inter/inter.css");
 @import url(./vendor/fonts/NanumGothic/font.css);
 @import url(./vendor/fonts/NotoSans/font.css);
 @import url("https://fonts.cdnfonts.com/css/montserrat");
@@ -32,13 +35,20 @@
   font-weight: normal;
   font-style: normal;
 }
-/*rem 작업을 위한 12px로 조정*/
+/*rem 작업을 위한 10px로 조정*/
 html {
-  font-size: 12px;
-  font-family: "Montserrat", "Noto Sans", "Nanum Gothic", "Malgun Gothic", sans-serif;
+  font-size: 10px;
+  font-family: "SUIT", "Montserrat", "Noto Sans", "Nanum Gothic", "Malgun Gothic", sans-serif;
   font-weight: 400;
-  color: #333333;
+  color: #383838;
   word-break: keep-all;
+}
+
+body {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
 
 ul {
@@ -69,13 +79,21 @@ table caption {
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-.onlyLg, .onlyMd {
-  display: none;
+.mob, .onlyLg, .onlyMd {
+  display: none !important;
+}
+
+.mobHide {
+  display: block !important;
 }
 
 @media (max-width: 1200px) {
-  html {
-    font-size: 9px;
+  .mob {
+    display: block !important;
+  }
+
+  .mobHide {
+    display: none !important;
   }
 
   .onlyLg {
@@ -87,10 +105,6 @@ table caption {
   }
 }
 @media (max-width: 768px) {
-  html {
-    font-size: 9px;
-  }
-
   .onlyMd {
     display: block;
   }
@@ -113,15 +127,17 @@ table caption {
 }
 
 .container-fluid {
-  max-width: 1400px;
+  max-width: 1280px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 /*FOR SIDEBAR
-#wrapper {max-width: 1400px; margin: 0 auto;}
+#wrapper {max-width: 1280px; margin: 0 auto;}
 #content {display: block; flex-wrap: wrap; align-items: stretch; width: 100%; min-height: 58rem; padding: 8rem 0; color: #333;}*/
 /*FOR LAYOUT*/
 .tabMenu {
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -143,25 +159,7 @@ table caption {
   transform: translateY(-50%);
   width: calc( 100% - 8rem);
   height: 0.5rem;
-  background-color: #f15c22;
-}
-
-.title {
-  font-size: 3.8rem;
-  line-height: 120%;
-  font-weight: 300;
-  color: #222;
-  text-align: center;
-  margin-bottom: 6rem;
-}
-.title b {
-  font-weight: 800;
-}
-
-.detail {
-  font-size: 2.1rem;
-  font-weight: 400;
-  color: #222;
+  background-color: #ff5e00;
 }
 
 #content {
@@ -184,60 +182,102 @@ table caption {
     }}
   }*/
 }
+#content .contentTitleWrap {
+  background-color: #d9d5cb;
+}
 #content .contentTitle {
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   font-weight: 700;
-  color: black;
+  font-family: "Poppins";
+  color: #006c67;
+  padding: 1.7rem 0;
+}
+#content .contentIntroWrap {
+  background-color: #006c67;
 }
 #content .contentIntro {
-  font-size: 2.1rem;
-  font-weight: 400;
-  color: #222;
-  font-family: "Nanum Square Round";
-  word-break: keep-all;
+  padding: 3.3rem 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-family: "SUIT";
+  text-align: center;
+  color: white;
 }
 #content .contentMain {
   margin-top: 2rem;
 }
 
-.minorHeading {
-  position: relative;
-  font-size: 2.6rem;
-  line-height: 4rem;
-  color: black;
-  margin-bottom: 2rem;
-  padding-left: 0.8rem;
-  /*border-top: 3px solid #009ddc; border-image: linear-gradient(to right, #009ddc 0%, #009ddc 2%, transparent 2%, transparent 100%) 1; border-image-slice: 1;*/
-}
-.minorHeading:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #f15c22;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  z-index: -1;
-}
-
-.subHeading {
+.majorTitle {
+  margin-top: 8rem;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: #000000;
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: "Poppins";
+  text-align: left;
+  color: #ff5e00;
 }
 
-.paragraph {
-  margin-bottom: 1.7rem;
-  font-weight: 400;
-  font-size: 2.2rem;
-  list-style: none;
+.minorTitle {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: "Poppins";
+  color: #006c67;
 }
-.paragraph.sub {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  color: #a0a0a0;
+
+.subTitle {
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "Poppins";
+  color: #383838;
+}
+
+.detailTitle {
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-family: "Inter";
+  color: #006c67;
+}
+
+.overviewTitle {
+  margin-bottom: 7rem;
+  font-size: 1.6rem;
+  font-family: "Inter";
+  color: #383838;
+}
+
+.introTitle {
+  margin-bottom: 7rem;
+  font-size: 1.7rem;
+  font-family: "SUIT";
+  color: #383838;
+}
+
+.introduceWrap {
+  background-color: #006c67;
+}
+
+.introduce {
+  margin: 0 auto;
+  padding: 2.9rem 0;
+  font-size: 1.7rem;
+  line-height: 180%;
+  font-weight: 600;
+  font-family: "SUIT";
+  text-align: center;
+  color: white;
+}
+
+.intro {
+  margin-top: 6.6rem;
+  margin-bottom: 4rem;
+  font-size: 1.7rem;
+  line-height: 120%;
+  font-family: "Poppins";
+  font-weight: 600;
+  color: #383838;
 }
 
 .notes {
@@ -246,6 +286,22 @@ table caption {
   margin-bottom: 2rem;
   background-color: #eeeff2;
   color: #878686;
+}
+
+.textOrange {
+  color: #ff5e00;
+}
+
+.textGreen {
+  color: #006c67;
+}
+
+.bgOrange {
+  background-color: #ff5e00;
+}
+
+.bgGreen {
+  background-color: #006c67;
 }
 
 .highlight {
@@ -309,19 +365,17 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
     padding: 0 2.5rem;
     font-size: 1.9rem;
     font-weight: 600;
-    color: #333;
-    /*.fixed-top과 동일*/
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+    background-color: #ff5e00;
+    /*.fixed-top과 동일 position: fixed; top: 0; right: 0; left: 0; z-index: 1030;*/
     /*.navbar-expand- 동일*/
     flex-flow: row nowrap;
     justify-content: flex-start;
     /*부트스트랩에서 기본적으로 제공하는 스타일 제거*/
     /*부트스트랩에서 기본적으로 제공하는 화살표 제거*/
     /*부트스크랩 메뉴 우버시 보이도록*/
+    /* 메뉴명 뒤 초록색 배경바 시작 */
+    position: relative;
+    /* 메뉴명 뒤 초록색 배경바 끝 */
     /*GNB MENU DESIGN CUSTOM*/
   }
   .gnb .navbar-nav {
@@ -355,7 +409,8 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
     content: none;
   }
   .gnb .dropdown:hover > .dropdown-menu {
-    display: block;
+    display: flex;
+    /* 한줄 정렬을 위해 수정 block;*/
   }
   .gnb .dropdown-menu {
     margin: 0;
@@ -365,59 +420,101 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
   .gnb .dropdown-item:hover {
     background-color: transparent;
   }
+  .gnb .navbar-nav .show > .nav-link {
+    color: inherit;
+  }
+  .gnb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 5.6rem;
+    opacity: 0;
+    z-index: 1;
+    background-color: #006c67;
+    pointer-events: none;
+    transition: opacity 150ms ease;
+  }
+  .gnb:has(.dropdown:hover)::after {
+    opacity: 1;
+  }
+  .gnb:has(.dropdown .dropdown-menu.show)::after {
+    opacity: 1;
+  }
   .gnbMenu {
     justify-content: space-around;
   }
-  .gnbMenu .nav-item:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #f15c22;
-    transform: scaleX(0);
-    transition: transform 300ms ease-in-out;
-  }
-  .gnbMenu .nav-item:hover:after {
-    transform: scaleX(1);
+  .gnbMenu .nav-item {
+    /*&:after {content:''; display: block; width: 100%; height: 3px; background-color: $outrageousOrange;transform: scaleX(0); transition: transform 300ms ease-in-out;}
+    &:hover:after {transform: scaleX(1);}*/
   }
   .gnbMenu .nav-item:hover {
-    color: #f15c22;
+    color: white;
   }
-  .gnbMenu .nav-item .nav-link {
+  .gnbMenu .nav-link {
     padding: 2.2rem 2.75rem;
   }
-  .gnbMenu .dropdown-menu {
-    right: auto;
-    left: 50%;
-    transform: translate(-50%, 0);
-    /*부트스트랩의 menu 가운데 정렬 트릭*/
-    width: 100%;
+  .gnbMenu .nav-link .mobNavlinkBar {
+    display: none;
+  }
+  .gnbMenu .dropdown {
+    position: relative;
+  }
+  .gnbMenu .dropdown-menu.show {
+    display: flex;
     border: 0;
-    border-radius: 0;
-    border-top: 0.6rem solid rgba(0, 0, 0, 0);
-    padding: 1.4rem 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .gnbMenu .dropdown-menu {
+    /*기존 right: auto; left: 50%; transform: translate(-50%, 0);//부트스트랩의 menu 가운데 정렬 트릭
+    width: 100%; border: 0; border-radius: 0;*/
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    /* 가로 한 줄 */
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* 그 외 */
+    border: 0;
+    color: white;
   }
   .gnbMenu .dropdown-menu .dropdown-item {
+    /*기존 width: 100%; padding:0.5rem; font-size: 1.5rem; text-align:center;*/
+    width: auto;
+    padding: 2rem;
     font-size: 1.5rem;
-    padding: 0.5rem;
     text-align: center;
-    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
   }
   .gnbMenu .dropdown-menu .dropdown-item:hover {
-    color: rgba(0, 0, 0, 0.4);
+    color: #383838;
   }
-  .gnbLogo {
+  .gnbLogoText {
+    margin: 0;
+    margin-right: 5%;
+    padding: 0;
+    font-size: 2.2rem;
+    font-family: "Poppins";
+    color: #006c67 !important;
+  }
+  .gnbLogoImg {
     margin: 0;
     padding: 0;
     width: 6.5rem;
   }
-  .gnbLogo img {
+  .gnbLogoImg img {
     width: 100%;
   }
   .gnbInner {
-    justify-content: center;
+    justify-content: flex-start;
+    /*center;*/
+    color: white;
   }
   .gnbSub {
     display: flex;
@@ -447,17 +544,20 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
     z-index: 1030;
     /*부트스트랩에서 기본적으로 제공하는 스타일 제거*/
     /*부트스트랩에서 기본적으로 제공하는 스타일 커스텀*/
+    /*메뉴 모두 펼치기*/
+    /*메뉴 오버레이 위에 보이도록 수정*/
+    /*메뉴 오버레이*/
   }
   .gnb.navbar {
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ff5e00;
   }
   .gnb .container-fluid {
     padding: 0;
   }
   .gnb .navbar-toggler {
     padding: 1.4rem 1.4rem;
-    background-color: #f15c22;
+    background-color: #ff5e00;
     border: 0;
     border-radius: 0;
   }
@@ -465,7 +565,7 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
     width: 3.2rem;
     height: 3.2rem;
     transition: transform 0.45s ease;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(0, 128, 128, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
   }
   .gnb .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
     transform: rotate(90deg);
@@ -476,21 +576,25 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
     display: none;
   }
   .gnb .navbar-nav .nav-link:hover {
-    color: inherit;
+    color: #006c67;
   }
   .gnb .navbar-nav .nav-link {
-    padding: 16px 20px;
-    font-size: 18px;
-    color: black;
-    background-color: #fff;
-    border-bottom: 1px solid #eeeeee;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    font-size: 3.6rem;
+    font-weight: 800;
+    color: #006c67;
+    background-color: #ff5e00;
   }
-  .gnb .navbar-nav .show > .nav-link {
-    color: white;
-    background-color: #f15c22;
-  }
-  .gnb .navbar-nav .nav-item.dropdown {
-    border-bottom: 1px solid #eee;
+  .gnb .navbar-nav .nav-link .mobNavlinkBar {
+    display: inline-block;
+    margin-left: 0.5rem;
+    width: 3rem;
+    height: 0.5rem;
+    background-color: #006c67;
+    transform: translateY(0.1rem);
   }
   .gnb .dropdown-menu {
     transition: all 0.3s ease-in-out;
@@ -502,10 +606,40 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
   .gnb .dropdown-item {
     padding: 10px 20px;
     font-size: 16px;
-    color: #666;
     white-space: nowrap;
-    background-color: #f7f7f7;
     border: 0;
+    color: #006c67;
+    background-color: #ff5e00;
+  }
+  .gnb .dropdown-menu {
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    float: none !important;
+    text-align: center;
+  }
+  .gnb .gnbLogoText, .gnb .navbar-toggler {
+    z-index: 1060;
+  }
+  .gnbInner {
+    display: block !important;
+    padding-top: 9rem;
+    /*상단로고 자리*/
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    opacity: 0;
+    background: #ff5e00;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .gnbInner.show {
+    opacity: 1;
+    pointer-events: auto;
+    /*열렸을때만 보임*/
   }
   .gnbMenu {
     font-size: 1.6rem;
@@ -513,12 +647,16 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
   .gnbMenu .dropdown-menu {
     font-size: 1.4rem;
   }
-  .gnbLogo {
-    width: 5rem;
-    margin-left: 0.8rem;
-  }
   .gnbLogo img {
     width: 100%;
+  }
+  .gnbLogoText {
+    margin: 0;
+    margin-right: 5%;
+    padding: 0;
+    font-size: 2.2rem;
+    font-family: "Poppins";
+    color: #006c67 !important;
   }
   .gnbSub {
     display: none;
@@ -546,7 +684,7 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
 #sidebar {
   position: absolute;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1280px;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -671,27 +809,22 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
 /* ---------------------------------------------------
   FOOTER
 ----------------------------------------------------- */
+.footerWrap {
+  background-color: #006c67;
+}
+
 .footer {
-  padding: 4rem 0;
-  font-size: 1.8rem;
-  line-height: 120%;
+  padding: 6.9rem 0 7rem 0;
+  font-size: 1.6rem;
+  text-align: center;
   color: white;
-  background-color: #43564a;
 }
-.footerAddress {
-  margin-bottom: 1.8rem;
+.footerLocation {
+  margin-bottom: 1rem;
 }
-.footerLangLink {
-  display: block;
-  font-size: 1.6rem;
-  color: #888;
-}
-.footerLangLink:hover {
-  color: #888;
-}
-.footerRight {
-  font-size: 1.6rem;
-  color: #888;
+.footerLocation b {
+  margin-right: 1rem;
+  font-weight: bold;
 }
 
 /* ---------------------------------------------------
@@ -894,6 +1027,7 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
   display: flex;
   align-items: center;
   text-align: center;
+  font-family: "Poppins";
   color: white;
 }
 .jumbotronHeading {
@@ -911,7 +1045,19 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
   background-position: 0% 45%;
 }
 
-@media (max-width: 991px) {
+.jumbotronFooter {
+  padding: 5rem 0;
+  font-size: 4.4rem;
+  line-height: 120%;
+  font-weight: 700;
+  font-family: "Poppins";
+  text-align: center;
+  color: white;
+  background: #ff5e00;
+  border-bottom: 2.7rem solid #006c67;
+}
+
+@media (max-width: 1199.98px) {
   .carouselOverlay {
     position: relative;
     height: auto;
@@ -923,7 +1069,73 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
   }
 
   .jumbotron {
-    height: 28rem;
+    height: 42rem;
+  }
+  .jumbotronBg1 {
+    background-position: center;
+  }
+
+  .jumbotronFooter {
+    font-size: 2.7rem;
+    line-height: 140%;
+    border-bottom-width: 2rem;
+  }
+
+  #content .contentTitle {
+    padding: 2.3rem 0;
+    font-size: 2.5rem;
+  }
+  #content .contentIntro {
+    padding: 3rem 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .majorTitle {
+    font-size: 2.6rem;
+    margin-top: 3.5rem;
+  }
+
+  .minorTitle {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "POPPINS";
+  }
+
+  .detailTitle {
+    font-size: 1.5rem;
+  }
+
+  .overviewTitle {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .introTitle {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    line-height: 120%;
+    font-family: "SUIT";
+  }
+
+  .introduce {
+    padding: 3rem 0.9em;
+    font-size: 1.45rem;
+    line-height: 170%;
+    font-weight: 500;
+  }
+
+  .footer {
+    padding: 3.2rem 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .footerLocation {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
   }
 }
 /* ---------------------------------------------------
