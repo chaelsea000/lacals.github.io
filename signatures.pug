@@ -293,30 +293,29 @@ block div
                 |이메일(postmaster@lacals.com) 별도 문의
             
                         
-        //- DOM이 깨져서 안됨
-            button.btn.btn-primary(type="button", data-toggle="modal", data-target="#exampleModalLong")
+        button.btn.btn-primary(type="button", data-toggle="modal", data-target="#exampleModalLong")
             | Launch demo modal
 
-            // ✅ Modal
-            div.modal.fade#exampleModalLong(tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
-            div.modal-dialog(role="document")
-                div.modal-content
-                div.modal-header
-                    h5.modal-title#exampleModalLongTitle Modal title
-                    button.close(type="button", data-dismiss="modal", aria-label="Close")
-                    span(aria-hidden="true") &times;
-                div.modal-body
-                    | ...
-                div.modal-footer
-                    button.btn.btn-secondary(type="button", data-dismiss="modal") Close
-                    button.btn.btn-primary(type="button") Save changes
+        // ✅ Modal
+        div.modal.fade#exampleModalLong(tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
+        div.modal-dialog(role="document")
+            div.modal-content
+            div.modal-header
+                h5.modal-title#exampleModalLongTitle Modal title
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            div.modal-body
+                | ...
+            div.modal-footer
+                button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+                button.btn.btn-primary(type="button") Save changes
 
     style.
         hr {margin: 0 auto; max-width: 1280px; border-top:0; border: 1px solid rgba(137,137,137,0.6);}
 
         /*Signatures*/
         .registration {}
-        .registration .detail {margin-bottom: 8.4rem; display: flex; flex-direction: column; align-items: center; font-size: 1.7rem;}
+        .registration .detail {margin-bottom: 8.4rem; display: flex; flex-direction: column; align-items: center; font-size: 1.7rem; text-align: center;}
         .registration .detail img {margin-bottom: 5.5rem; max-width: 64.3rem; width: 100%;}
         .registration .detail b {margin-bottom: 3.5rem; display: block; color: #006c67;}
         .registration .detail span {display: block;}

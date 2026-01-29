@@ -409,19 +409,27 @@ block div
         div.atWhere.container-fluid
             h4.majorTitle At where
             div.detail
-                p 서울특별시 강남구 선정릉132길 17(청담동 38-18), 4층
-                img(src="./images/atWhere.png")
+                p.atWhereAddress 서울특별시 강남구 선정릉132길 17(청담동 38-18), 4층
+                img.atWhereImg(src="./images/atWhere.png")
                 ul 
                     li
-                        b 지하철 이용 시
-                        span 7호선, 수인분당선 강남구청역 4번 출구 도보 2분
+                        b 
+                            span.imgWrap
+                                img(src="./images/iconSubway.png")
+                            |지하철 이용 시
+                        p 7호선, 수인분당선 강남구청역 4번 출구 도보 2분
                     li 
-                        b 버스 이용 시
-                        span 청담동래미안아파트역 하차 후 도보 3분
+                        b 
+                            span.imgWrap
+                                img(src="./images/iconBus.png")
+                            |버스 이용 시
+                        p 청담동래미안아파트역 하차 후 도보 3분
                     li
-                        b 자가용 이용 시
-                        span 강남구 선릉로 132길 17(청담동 38-18), 4층
-                    
+                        b 
+                            span.imgWrap
+                                img(src="./images/iconCar.png")
+                            |자가용 이용 시
+                        p 강남구 선릉로 132길 17(청담동 38-18), 4층                    
 
     style.
         /*About LaCalS*/
@@ -505,10 +513,13 @@ block div
         .atWhere {}
         .atWhere .majorTitle {margin-bottom: 8.2rem;}
         .atWhere .detail {margin-bottom: 9rem; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-        .atWhere .detail p{margin-bottom: 2rem; font-size: 1.8rem; font-family: 'SUIT'; text-align: center; color: #383838;}
-        .atWhere .detail img {width: 71rem; margin-bottom: 3.2rem;}
-        .atWhere .detail ul li {font-size: 1.8rem; font-family: 'SUIT'; text-align: center; color: #383838;}
-        .atWhere .detail ul li b {margin-right: 0.8rem; font-weight: 700;}
+        .atWhere .detail .atWhereAddress {margin-bottom: 2rem; font-size: 1.8rem; font-family: 'SUIT'; text-align: center; color: #383838;}
+        .atWhere .detail .atWhereImg {width: 71rem; margin-bottom: 3.2rem;}
+        .atWhere .detail ul li {margin-bottom: 0.8rem; display: flex; align-items: center; font-size: 1.8rem; font-family: 'SUIT'; text-align: center; color: #383838;}
+        .atWhere .detail ul li b {min-width: 15.8rem; display: flex; align-items: center; margin-right: 0.8rem; font-weight: 700;}
+        .atWhere .detail ul li .imgWrap {}
+        .atWhere .detail ul li .imgWrap img {width: 32px; margin-right: 8px; border-radius: 4px;}
+        .atWhere .detail ul li p {display: inline-block; margin-bottom: 0;}
 
         @media (max-width: 1199.98px) {   
             .focus {}
@@ -580,9 +591,13 @@ block div
 
             .atWhere .majorTitle {margin-top: 3.4rem; margin-bottom: 0.5rem;}
             .atWhere .detail {margin-bottom: 4rem;}
-            .atWhere .detail p {margin-bottom: 1rem; width: 100%; font-size: 1.3rem; text-align: left;}
-            .atWhere .detail img {width: 100%;}
-            .atWhere .detail ul li {font-size: 1.3rem;}
+            .atWhere .detail .atWhereAddress {margin-bottom: 1rem; width: 100%; font-size: 1.3rem; text-align: left;}
+            .atWhere .detail .atWhereImg {width: 100%;}
+            .atWhere .detail ul li {display: flex; flex-direction: column; margin-bottom: 0.8rem; font-size: 1.3rem;}
+            .atWhere .detail ul li b {min-width: auto; margin-right: 0;}
+            .atWhere .detail ul li .imgWrap {}
+            .atWhere .detail ul li .imgWrap img {width: 22px; margin-right: 4px;}
+            .atWhere .detail ul li p {}
         }
 
         @media (max-width: 991.98px) {
