@@ -30,15 +30,16 @@ block div
                 |"LaCalS에서 아이는 배우는 존재를 넘어, 스스로 이야기하고 표현하는 주인공이 됩니다."
         div.stages.container-fluid
             h4.majorTitle Stages
-            //-p.stagesTitle “Stage · Language · Emotion”
-                span 아이의 무대 위 성장 여정
-            p.detail.mobHide
-                img(src="./images/stages.png")
-            //-깃발 자리
-                p.detail.mob
-                    img(src="./images/stages1WithTitle_mob.png")
-            p.detail.mob
-                img(src="./images/stages_mob.png")
+            div.stagesImgWrap
+                //-p.stagesImgTitle “Stage · Language · Emotion”
+                    span 아이의 무대 위 성장 여정
+                img.mobHide(src="./images/stages1WithTitle.png")
+                img.mob(src="./images/stages1WithTitle_mob.png")
+            div.stagesFlagWrap
+                img(src="./images/stages2FlagText.png")
+            div.stagesImgWrap
+                img.mobHide(src="./images/stages2.png")
+                img.mob(src="./images/stages2_mob.png")
         div.keywordIntro.container-fluid
             h4.minorTitle Lama · Harpatka · Bitahon
             p.introTitle '호기심·도전·자신감'을 상징하는 히브리어이며, 각 프로그램에 하브루타 교육 접근법이 녹아있습니다. 아이가 세계 속 다양한 언어와 문화적 맥락을 자연스럽게 접하도록 돕습니다.            
@@ -290,7 +291,25 @@ block div
                 |※ 외부강의 및 기관 협업
                 br
                 |이메일(postmaster@lacals.com) 별도 문의
+            
+                        
+        //- DOM이 깨져서 안됨
+            button.btn.btn-primary(type="button", data-toggle="modal", data-target="#exampleModalLong")
+            | Launch demo modal
 
+            // ✅ Modal
+            div.modal.fade#exampleModalLong(tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
+            div.modal-dialog(role="document")
+                div.modal-content
+                div.modal-header
+                    h5.modal-title#exampleModalLongTitle Modal title
+                    button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times;
+                div.modal-body
+                    | ...
+                div.modal-footer
+                    button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+                    button.btn.btn-primary(type="button") Save changes
 
     style.
         hr {margin: 0 auto; max-width: 1280px; border-top:0; border: 1px solid rgba(137,137,137,0.6);}
@@ -304,11 +323,14 @@ block div
     
         .stages {margin-bottom: 8.5rem;}
         .stages .majorTitle {margin-bottom: 5.4rem;}
-        .stages .stagesTitle {font-size: 2.4rem; font-weight: 600; font-family: 'Poppins'; color: #383838;}
-        .stages .stagesTitle span {margin-top: 0.8rem; font-size: 1.5rem; font-weight: 400; font-family: 'SUIT';}
+        .stages .stagesImgTitle {font-size: 2.4rem; font-weight: 600; font-family: 'Poppins'; color: #383838;}
+        .stages .stagesImgTitle span {margin-top: 0.8rem; font-size: 1.5rem; font-weight: 400; font-family: 'SUIT';}
 
-        .stages .detail {display: flex; flex-direction: column; align-items: center;}
-        .stages .detail img {max-width: 92.7rem; width: 100%;}
+        .stages .stagesImgWrap {display: flex; flex-direction: column; align-items: center;}
+        .stages .stagesImgWrap:first-of-type img {max-width: 763px; width: 100%;}
+        .stages .stagesImgWrap:last-of-type img {max-width: 498px; width: 100%;}
+        .stages .stagesFlagWrap {margin-top: 84px; margin-bottom: 38px; display: flex; flex-direction: column; align-items: flex-start;}
+        .stages .stagesFlagWrap img {max-width: 226px; width: 100%;}
                 
         .keywordWrap {background-color: #ff5e00;}
         .keywordIntro .minorTitle {margin-bottom: 0.5rem; font-weight: 600;}
@@ -364,10 +386,13 @@ block div
             .registration .detail ul {margin-top: 2rem;}
 
             .stages {margin-bottom: 4.5rem; padding:0;}
-            .stages .stagesTitle {margin-top: 3.5rem; display: flex; flex-direction: column; align-items: center; font-size: 2.2rem;}
-            .stages .stagesTitle span {margin-top: 0.8rem; font-size: 1.5rem;}
-            .stages .detail.mob {margin-top: 4.4rem;} 
-
+            .stages .stagesImgTitle {margin-top: 3.5rem; display: flex; flex-direction: column; align-items: center; font-size: 2.2rem;}
+            .stages .stagesImgTitle span {margin-top: 0.8rem; font-size: 1.5rem;}
+            .stages .stagesImgWrap:first-of-type img {max-width: none;}
+            .stages .stagesImgWrap:last-of-type img {max-width: 414px;}
+            .stages .stagesFlagWrap {margin-top: 40px; margin-bottom: 28px;}
+            .stages .stagesFlagWrap img {max-width: 147px;}
+                    
             .keywordIntro .minorTitle {margin-bottom: 2rem;}
             .keyword {padding-bottom: 0.8rem;}
             .keyword .keywordList .keywordListItem {padding: 2.2rem 2rem;}
@@ -418,7 +443,7 @@ block div
         
     script.
         $(document).ready(function () {
-
+            
             $('.keywordList').slick({
                 dots: true,
                 arrows: false,

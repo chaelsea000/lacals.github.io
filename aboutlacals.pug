@@ -488,7 +488,12 @@ block div
         .crew.change .crewList {display: flex; gap: 2.7rem;}
         .crew.change .crewList > li {margin-top: 2.5rem;}
         .crew.change .crewListDetail {padding: 2.7rem; border-radius: 1.8rem; background-color: white;}
-
+ 
+        /*애니메이션 효과*/ 
+        .crew, .crewBgGreen, .crewBgOrange {transition: background-color .25s cubic-bezier(.4,0,.2,1);}
+        /* js 함수 완료 후 호출되어서 삭제
+        .crew .crewListDesc {transition: height .7s ease, opacity .7s ease, transform .7s ease; overflow: hidden;}*/
+ 
         .bici .detail {max-width: 1100px; margin:0 auto; display: flex; justify-content: space-between;}
         .bici .detail .biciIcon {width: 28.7rem;/*100%*/}
         .bici .detail .biciIcon img {width: 100%;}
@@ -546,7 +551,7 @@ block div
         
             .crew .crewListDesc {margin-top: 1.2rem;}
             .crew .crewListDesc span {font-size: 1.2rem;}
-            .crew .crewListDescSummary {padding:3.2rem 1.4rem;}
+            .crew .crewListDescSummary {margin-top: 15px; padding:3.2rem 1.4rem;}
             .crew .crewListDescSummary > dl {margin-bottom: 2rem;}
             .crew .crewListDescSummary > dl dt {padding-bottom: 1.2rem; font-size: 1.6rem; /*padding-bottom: 1.5rem; font-size: 1.4rem;*/}
             .crew .crewListDescSummary > dl dt::after {height: 0.1px;}
@@ -555,7 +560,7 @@ block div
             .crew .crewListDescSummary .crewListDescEdu,
             .crew .crewListDescSummary .crewListDescExp,
             .crew .crewListDescSummary .crewListDescEtc {height: auto;} 
-            .crew .crewListDescHistory {}
+            .crew .crewListDescHistory {margin-top: 15px;}
             .crew .crewListDescHistory > li {margin-bottom:0; font-size: 1.3rem;}
             .crew .crewListDescHistory > li:last-child {}
 
@@ -563,7 +568,7 @@ block div
             .crew.change .crewBgOrange, .crew.change .crewBgGreen {background-color: inherit;}
             .crew.change .subTitle {padding: 1.4rem 0; font-size: 1.8rem; color: #006c67; background-color: #ff5e00;}
             .crew.change .crewList {display: flex; /*gap: 2.7rem;*/}
-            .crew.change .crewList > li:first-child {margin-top: 0;}
+            .crew.change .crewList > li {margin-top: 0; margin-bottom: 15px;/*container padding과 동일한 값*/}
             .crew.change .crewListDetail {padding: 0; border-radius: 0; background-color: inherit;/*PC버전 CSS 초기화*/ padding: 1.4rem; border-radius: 1.4rem; background-color: white;}
 
             .bici .majorTitle {margin-top: 3.2rem;}
