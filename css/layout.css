@@ -529,12 +529,8 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
 }
 @media (max-width: 991.98px) {
   .gnb {
-    /*.fixed-top과 동일*/
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+    /*.fixed-top과 동일
+    position: fixed; top: 0; right: 0; left: 0; z-index: 1030;*/
     /*부트스트랩에서 기본적으로 제공하는 스타일 제거*/
     /*부트스트랩에서 기본적으로 제공하는 스타일 커스텀*/
     /*메뉴 모두 펼치기*/
