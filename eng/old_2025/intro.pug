@@ -1,0 +1,42 @@
+extends layout_eng.pug 
+block variables 
+  -var menuType = "intro"
+
+block div
+    section.intro
+        a.introButton(href="whatwedo.html")
+            img(src="../images/cardButton1.png", alt="LaCalS")
+            div.introButtonOverlay
+                span LaCalS 
+                i.fas.fa-arrow-right.introButtonArrow
+        a.introButton(href="regular.html")
+            img(src="../images/cardButton2.png", alt="Signatures")
+            div.introButtonOverlay
+                span Signatures 
+                i.fas.fa-arrow-right.introButtonArrow
+        a.introButton(href="information.html")
+            img(src="../images/cardButton3.png", alt="Contact Us")
+            div.introButtonOverlay
+                span Contact Us 
+                i.fas.fa-arrow-right.introButtonArrow
+    style.
+        .intro {display: flex; flex-wrap: wrap; height: 100vh;}
+        .intro .introButton {flex: 1; position: relative; height: 100%; overflow: hidden; min-width: 360px;}
+        .intro .introButton img {width: 100%; height: 100%; object-fit: cover; transition: all 1s ease;}
+        .intro .introButton .introButtonOverlay {position: absolute; top: 0; left: 0; right: 0; bottom: 0; color: white; font-size: 4rem; font-weight: bold; background-color: rgba(67, 86, 74, 0.9); 
+        display: flex; align-items: center; justify-content: center;}
+        .introButtonArrow {margin-left: 2rem;}
+
+        /*보더 효과*/
+        .intro {gap: 1px;}
+        
+        /*마우스오버 효과*/
+        .introButton:hover img {transform: scale(1.1);}
+        .introButton:hover .introButtonOverlay {background-color:rgba(0,0,0,0); transition: all 1s;}
+        .introButton:hover .introButtonOverlay span {transform: translateX(-1.2rem); transition: transform 1s ease;}
+        .introButton:hover .introButtonOverlay > i {transform: translateX(1.2rem); transition: transform 1s ease;}
+        
+       @media (max-width: 1199.98px) {
+            .intro {flex-direction: column;}
+            .intro .introButton img {object-fit: cover; object-position: 40% 40%;}
+        }
