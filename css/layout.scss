@@ -231,7 +231,7 @@ p + .subHeading, figure + .subHeading, div+ .subHeading, table + .subHeading, ul
       }
     }
     &LogoText{padding: 0; margin: 0; margin-right: 5%; font-size: 2.2rem; font-family: 'Poppins'; color: $deepTeal!important;}
-    &LogoImg{width: 8rem; padding: 0; margin: 0;
+    &LogoImg{width: 8rem; padding: 0; margin: 0; margin-right: 5%;
       img {width: 100%;}
     }
     &Inner {justify-content: flex-start;/*center;*/ color: white;

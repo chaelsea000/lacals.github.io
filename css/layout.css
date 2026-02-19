@@ -507,6 +507,7 @@ p + .subHeading, figure + .subHeading, div + .subHeading, table + .subHeading, u
     width: 8rem;
     padding: 0;
     margin: 0;
+    margin-right: 5%;
   }
   .gnbLogoImg img {
     width: 100%;
