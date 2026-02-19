@@ -100,10 +100,14 @@ block div
         div.modal.fade#lessonTheme1(tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
             div.modal-dialog(role="document")
                 div.modal-content
-                    //-div.modal-header
-                        h5.modal-title#exampleModalLongTitle
-                        button.close(type="button", data-dismiss="modal", aria-label="Close")
-                            span(aria-hidden="true") &times;
+                    div.modal-header
+                        //div.modal-header
+                            h5.modal-title#exampleModalLongTitle
+                            button.close(type="button", data-dismiss="modal", aria-label="Close")
+                                span(aria-hidden="true") &times;
+                        button.modal-close(type="button", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true") 
+                                i.fa-light.fa.fa-chevron-left
                     div.modal-body
                         p.majorTitle 정규 레슨
                         p.introTitle 사고의 유연성을 길러 세계 어디서든 품격을 갖춘 글로벌 인재 육성을 목표로 합니다.
@@ -162,17 +166,17 @@ block div
                                     li 
                                         b 주요언어
                                         p 한국어, 영어
-                    hr      
-                    div.modal-footer
-                        button.btn.btn-secondary(type="button", data-dismiss="modal") Close
-                        button.btn.btn-primary(type="button") Save changes
+                    //hr      
+                        div.modal-footer
+                            button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+                            button.btn.btn-primary(type="button") Save changes
         div.modal.fade#lessonTheme2(tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
             div.modal-dialog(role="document")
                 div.modal-content
-                    //-div.modal-header
-                        h5.modal-title#exampleModalLongTitle
-                        button.close(type="button", data-dismiss="modal", aria-label="Close")
-                            span(aria-hidden="true") &times;
+                    div.modal-header
+                        button.modal-close(type="button", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true") 
+                                i.fa-light.fa.fa-chevron-left
                     div.modal-body
                         h2.majorTitle 테마 레슨
                         p.introTitle 하브루타식 자기주도 활동을 통해 다양한 직·간접 경험을 하며 세상을 바라보는 시야 확장을 도모합니다.
@@ -268,17 +272,13 @@ block div
                                         li 
                                             b 주요언어
                                             p 영어
-                    hr
-                    div.modal-footer
-                        button.btn.btn-secondary(type="button", data-dismiss="modal") Close
-                        button.btn.btn-primary(type="button") Save changes
         div.modal.fade#lessonTheme3(tabindex="-1", role="dialog", aria-labelledby="exampleModalLongTitle", aria-hidden="true")
             div.modal-dialog(role="document")
                 div.modal-content
-                    //-div.modal-header
-                        h5.modal-title#exampleModalLongTitle
-                        button.close(type="button", data-dismiss="modal", aria-label="Close")
-                            span(aria-hidden="true") &times;
+                    div.modal-header
+                        button.modal-close(type="button", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true") 
+                                i.fa-light.fa.fa-chevron-left
                     div.modal-body 
                         h2.majorTitle 확장클래스
                         ul.lessonList
@@ -310,9 +310,6 @@ block div
                                     li 
                                         b 주요언어
                                         p 영어
-                    div.modal-footer
-                        button.btn.btn-secondary(type="button", data-dismiss="modal") Close
-                        button.btn.btn-primary(type="button") Save changes
         div.contactInfoWrap
             div.contactInfo
                 |※ 외부강의 및 기관 협업
@@ -339,7 +336,13 @@ block div
     style.
         hr {margin: 0 auto; max-width: 1280px; border-top:0; border: 1px solid rgba(137,137,137,0.6);}
         /*팝업창*/
+        .modal {padding:2%!important;}
         .modal-dialog {max-width: none!important; margin: 1.7rem;}
+        .modal-content {padding: 1.8%; border-radius: 1.2rem;}
+        .modal-content .majorTitle {margin-top: 2rem;}
+        .modal-header {border: 0; padding: 0;}
+        .modal-body {padding: 0;}
+        .modal-close {padding: 0; border: 0; font-size: 3.8rem; font-weight: 700; line-height: 1; text-shadow: none; color: #383838; background: transparent;}
         /*Signatures*/
         .registration {}
         .registration .detail {margin-bottom: 8.4rem; display: flex; flex-direction: column; align-items: center; font-size: 1.7rem; text-align: center;}
@@ -402,8 +405,9 @@ block div
         .contactInfo {padding: 3.4rem 0; font-size: 1.6rem; font-weight: 600; font-family: 'SUIT'; text-align: center; color: white;}
         
         @media (max-width: 1199.98px) {
+            .modal-content {padding: 4%;}
+            .modal-close {font-size: 2.8rem;}
             hr {margin: 0; border-top:0; border: 7px solid #006C67;}
-
             .registration {}
             .registration .detail {margin-bottom: 3rem; font-size: 1.4rem; line-height: 140%;}
             .registration .detail img {margin-bottom: 2.5rem;}
@@ -441,8 +445,8 @@ block div
 
             #lessonTheme1 .lessonList > li:last-child {padding-top: 3.2rem; border-top: 1px solid rgba(137,137,137,0.6);}
 
-            #lessonTheme2 .majorTitle {margin-top: 7.6rem;}
-            #lessonTheme3 .majorTitle {margin-top: 7rem; margin-bottom: 2.8rem;}
+            #lessonTheme2 .majorTitle {/*팝업일시 해당사항없음 margin-top: 7.6rem;*/}
+            #lessonTheme3 .majorTitle {/*팝업일시 해당사항없음margin-top: 7rem;*/ margin-bottom: 2.8rem;}
 
             #lessonTheme2 .lessonListItem:first-of-type {margin-bottom: 3.4rem;} /*클래식레토릭 이전*/
             #lessonTheme2 .lessonListItem:last-of-type .lessonList > li {padding: 0;}
